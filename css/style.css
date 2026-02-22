@@ -1,0 +1,259 @@
+/* ============================= */
+/* RESET BÁSICO */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e2e8f0;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* ============================= */
+/* CONTAINER PRINCIPAL */
+/* ============================= */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ============================= */
+/* TÍTULO */
+/* ============================= */
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #38bdf8;
+}
+
+/* ============================= */
+/* SEÇÕES */
+/* ============================= */
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #94a3b8;
+    border-left: 4px solid #38bdf8;
+    padding-left: 10px;
+}
+
+/* ============================= */
+/* BOX PADRÃO */
+/* ============================= */
+
+.box-display {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 60px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* BOTÕES */
+/* ============================= */
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Botão principal */
+
+#btnSortear {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    color: white;
+    font-size: 1rem;
+    padding: 12px 22px;
+}
+
+#btnSortear:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Botões de exame */
+
+.botoes-exames {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btnExame {
+    background: #1e293b;
+    color: #cbd5e1;
+    border: 1px solid #334155;
+}
+
+.btnExame:hover {
+    background: #334155;
+    color: #38bdf8;
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/* DOENÇA EM DESTAQUE */
+/* ============================= */
+
+#nomeDoenca {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #22d3ee;
+}
+
+/* ============================= */
+/* DICAS */
+/* ============================= */
+
+#listaDicas {
+    list-style: none;
+}
+
+#listaDicas li {
+    margin-bottom: 8px;
+    padding-left: 10px;
+    border-left: 3px solid #334155;
+}
+
+/* ============================= */
+/* RESULTADO DO EXAME */
+/* ============================= */
+
+#resultadoExame {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 20px;
+    white-space: pre-line;
+}
+
+/* ============================= */
+/* LINHA DIVISÓRIA */
+/* ============================= */
+
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #334155, transparent);
+    margin: 40px 0;
+}
+
+/* ============================= */
+/* RESPONSIVIDADE FUTURA */
+/* ============================= */
+
+/* Já preparado para virar responsivo facilmente */
+
+@media (max-width: 900px) {
+    body {
+        padding: 30px 20px 20px 20px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .botoes-exames {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+.laudo-container {
+    background: #f9fafc;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.tabela-laudo {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabela-laudo th,
+.tabela-laudo td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.conclusao {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.conclusao.normal {
+    background: #e6f7e6;
+    color: #2e7d32;
+}
+
+.conclusao.alterado {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.conclusao.crítico {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.conclusao.inconclusivo {
+    background: #e2e3e5;
+    color: #383d41;
+}
+
+.controle {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#btnOcultar {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    color: white;
+    font-size: 1rem;
+    padding: 12px 22px;
+}
+
+#btnOcultar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}

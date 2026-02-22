@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Clínico - Tela do Narrador</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ================= TÍTULO ================= -->
+        <header class="header-principal">
+            <h1>🏥 Quem sou eu? - Tela do Narrador</h1>
+            <p class="subtitulo">Simulador Clínico – Internato / Emergência / Ambulatório</p>   
+        </header>
+
+        <!-- ================= CONTROLE ================= -->
+        <section class="controle">
+            <button id="btnSortear" class="btn-principal">
+                🎲 Sortear Doença
+            </button>
+
+            <button onclick="alternarOcultacao()" id="btnOcultar">
+                🔒 Ocultar Doença
+            </button>
+        </section>
+        <!-- ================= DOENÇA ================= -->
+        <section class="doenca-section card">
+            <h2>🧠 Doença Sorteada</h2>
+            <div id="nomeDoenca" class="box-display destaque">
+                Nenhuma doença sorteada
+            </div>
+        </section>
+
+        <!-- ================= DICAS ================= -->
+        <section class="dicas-section card">
+            <h2>📌 Dicas para o Narrador</h2>
+            <ul id="listaDicas" class="box-display lista-dicas">
+                <!-- Dicas aparecem aqui -->
+            </ul>
+        </section>
+
+        <hr class="divisor">
+
+        <!-- ================= EXAMES ================= -->
+        <section class="exames-section card">
+            <h2>🧪 Solicitar Exames</h2>
+
+            <div class="botoes-exames">
+
+                <!-- Alto VPP -->
+                <button class="btnExame btn-alto" data-exame="troponina">Troponina</button>
+                <button class="btnExame btn-alto" data-exame="ecg">ECG</button>
+                <button class="btnExame btn-alto" data-exame="gasometria">Gasometria</button>
+
+                <!-- Médio VPP -->
+                <button class="btnExame btn-medio" data-exame="hemograma">Hemograma Completo</button>
+                <button class="btnExame btn-medio" data-exame="pcr">PCR</button>
+
+                <!-- Baixo / Confundidor -->
+                <button class="btnExame btn-baixo" data-exame="rx">Raio-X</button>
+                <button class="btnExame btn-baixo" data-exame="eas">EAS</button>
+                <button class="btnExame btn-baixo" data-exame="tc">TC / RM</button>
+
+            </div>
+        </section>
+
+        <!-- ================= RESULTADO ================= -->
+        <section class="resultado-section card">
+            <h2>📊 Laudo do Exame</h2>
+
+            <div id="resultadoExame" class="box-display laudo-area">
+                <p class="placeholder-laudo">
+                    Nenhum exame solicitado.
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="js/banco/cardiovascular.js"></script>
+    <script src="js/banco/endocrino.js"></script>
+    <script src="js/banco/gastro.js"></script>
+    <script src="js/banco/hemato.js"></script>
+    <script src="js/banco/infectologia.js"></script>
+    <script src="js/banco/nefro.js"></script>
+    <script src="js/banco/neurologia.js"></script>
+    <script src="js/banco/psiquiatria.js"></script>
+    <script src="js/banco/respiratorio.js"></script>
+    <script src="js/banco/banco-index.js"></script>
+
+    <script src="js/core/gerador-exames.js"></script>
+    <script src="js/core/script.js"></script>
+
+</body>
+</html>
